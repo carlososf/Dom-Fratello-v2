@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom Fratello — Restaurante & Pizzaria | Vargem Grande Paulista</title>
+    <meta name="description"
+        content="A tradição do jantar, agora também no almoço. Pizzas artesanais, massas, risotos e pratos executivos em Vargem Grande Paulista." />
+    <meta name="keywords"
+        content="restaurante Vargem Grande Paulista, pizzaria, Dom Fratello, almoço executivo, pizza artesanal, forno a lenha" />
+    <meta property="og:title" content="Dom Fratello — Restaurante & Pizzaria" />
+    <meta property="og:description"
+        content="Tradição, sabor e acolhimento em cada refeição. Almoço e jantar em Vargem Grande Paulista." />
+    <meta property="og:image" content="./almoco_hero.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./src/index.css" />
+    <link rel="stylesheet" href="./src/site.css" />
+    <!-- Framework de Ícones: Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">
+                <img src="./logo.png" alt="Dom Fratello" style="max-height: 50px;">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#sobre">A Casa</a></li>
+                <li><a href="#almoco">Almoço</a></li>
+                <li><a href="#jantar">Jantar</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="#horarios">Horários</a></li>
+            </ul>
+            <a href="https://wa.me/551141581318?text=Vim%20pelo%20site%2C%20gostaria%20de%20informa%C3%A7%C3%B5es"
+                target="_blank" class="btn btn-primary nav-cta" id="navCta">
+                Pedir no WhatsApp
+            </a>
+            <button class="nav-burger" id="navBurger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-mobile-menu" id="navMobileMenu">
+            <ul>
+                <li><a href="#sobre">A Casa</a></li>
+                <li><a href="#almoco">Almoço</a></li>
+                <li><a href="#jantar">Jantar</a></li>
+                <li><a href="#bebidas">Bebidas</a></li>
+                <li><a href="#horarios">Horários</a></li>
+            </ul>
+            <a href="https://wa.me/551141581318?text=Vim%20pelo%20site%2C%20gostaria%20de%20informa%C3%A7%C3%B5es"
+                target="_blank" class="btn btn-primary">Pedir no WhatsApp</a>
+        </div>
+    </nav>
+
+    <!-- ===== HERO — SÓ IMAGEM + 2 BOTÕES ===== -->
+    <section class="hero-clean" id="home">
+
+        <!-- Imagem de fundo -->
+        <div class="hero-clean-bg" style="background-image: url('./heropc.png')"></div>
+
+        <!-- Overlay suave apenas na base para os botões ficarem legíveis -->
+        <div class="hero-clean-overlay"></div>
+
+        <!-- Botões no canto inferior esquerdo -->
+        <div class="hero-clean-btns">
+
+            <!-- Botão 1: Cardápio (Dropdown) -->
+            <div class="pedidos-dropdown-wrap" id="cardapioWrap">
+                <button class="btn btn-amber hero-clean-btn" id="btnCardapio" aria-expanded="false">
+                    Cardápio
+                    <svg class="menu-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        width="14" height="14">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </button>
+                <div class="pedidos-dropdown" id="cardapioDropdown" aria-hidden="true" style="bottom: 100%; top: auto;">
+                    <a href="https://drive.google.com/file/d/1NP5gr5JxYOz7JDD6FwBZch78pKhDvYJq/view?usp=sharing"
+                        target="_blank" class="pedidos-dropdown-item">
+                        <span class="pd-icon">☀️</span>
+                        <div class="pd-text">
+                            <strong>Almoço</strong>
+                            <span>Ver cardápio completo</span>
+                        </div>
+                    </a>
+                    <div class="pedidos-dropdown-divider"></div>
+                    <a href="https://www.domfratello.com.br/wp-content/uploads/2025/04/Cardapio-2025-02-novo.pdf"
+                        target="_blank" class="pedidos-dropdown-item">
+                        <span class="pd-icon">🌙</span>
+                        <div class="pd-text">
+                            <strong>Jantar</strong>
+                            <span>Ver cardápio completo</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Botão 2: Pedidos & Informações (dropdown) -->
+            <div class="pedidos-dropdown-wrap" id="pedidosWrap">
+                <button class="btn btn-outline-light hero-clean-btn" id="btnPedidos" aria-expanded="false">
+                    Pedidos & Informações
+                    <svg class="menu-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        width="14" height="14">
+                        <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                </button>
+                <div class="pedidos-dropdown" id="pedidosDropdown" aria-hidden="true">
+                    <a href="https://wa.me/551141581318?text=Vim%20pelo%20site%2C%20gostaria%20de%20informa%C3%A7%C3%B5es"
+                        target="_blank" class="pedidos-dropdown-item" id="pdWhats1">
+                        <span class="pd-icon">💬</span>
+                        <div class="pd-text">
+                            <strong>WhatsApp</strong>
+                            <span>Fale conosco direto</span>
+                        </div>
+                    </a>
+                    <div class="pedidos-dropdown-divider"></div>
+                    <a href="https://www.ifood.com.br/delivery/vargem-grande-paulista-sp/dom-fratello-pizzaria--restaurante-jardim-floresta/a80ad78d-c973-4079-9353-b38ccee9f5da"
+                        target="_blank" class="pedidos-dropdown-item" id="pdIfood">
+                        <span class="pd-icon">🛵</span>
+                        <div class="pd-text">
+                            <strong>iFood</strong>
+                            <span>Peça pelo app</span>
+                        </div>
+                    </a>
+                    <div class="pedidos-dropdown-divider"></div>
+                    <a href="https://pedido.anota.ai/loja/dom-fratello-pizza-cia?f=ms" target="_blank"
+                        class="pedidos-dropdown-item" id="pdAnotaai">
+                        <span class="pd-icon">📋</span>
+                        <div class="pd-text">
+                            <strong>Anota Aí</strong>
+                            <span>Pedido online</span>
+                        </div>
+                    </a>
+                    <div class="pedidos-dropdown-divider"></div>
+                    <a href="https://wa.me/551141581318" target="_blank" class="pedidos-dropdown-item" id="pdWhats2">
+                        <span class="pd-icon">📞</span>
+                        <div class="pd-text">
+                            <strong>WhatsApp Reservas</strong>
+                            <span>Reservar mesa</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- ===== SOBRE A CASA ===== -->
+    <section class="sobre section-pad" id="sobre">
+        <div class="container sobre-grid">
+            <div class="sobre-visual reveal-left">
+                <div class="casa-carousel-fade" id="casaCarouselFade">
+                    <img src="./ambiente1.png" alt="Ambiente Dom Fratello" class="active" />
+                    <img src="./ambiente2.png" alt="Ambiente Dom Fratello" />
+                    <img src="./ambiente3.png" alt="Ambiente Dom Fratello" />
+                    <img src="./ambiente4.png" alt="Ambiente Dom Fratello" />
+                    <img src="./ambiente5.png" alt="Ambiente Dom Fratello" />
+                    <img src="./ambiente6.png" alt="Ambiente Dom Fratello" />
+                    <img src="./ambiente7.png" alt="Ambiente Dom Fratello" />
+                </div>
+            </div>
+            <div class="sobre-content reveal-right">
+                <div class="ornament">
+                    <span class="ornament-dot"></span>
+                    <span class="label-sm" style="color: var(--amber);">A Casa</span>
+                    <span class="ornament-line"></span>
+                </div>
+                <h2 class="display-md" style="color: var(--bordeaux);">
+                    Construída com<br /><em>dedicação, qualidade<br />e sabor.</em>
+                </h2>
+                <p class="body-lg" style="color: var(--text-muted); margin-top: 1.5rem;">
+                    A Dom Fratello é uma casa tradicional de Vargem Grande Paulista, construída com dedicação, qualidade
+                    e sabor ao longo dos anos. Reconhecida pela experiência marcante do jantar, com pizzas artesanais,
+                    massas, risotos, porções, carnes, peixes, sobremesas, cervejas, drinks e vinhos.
+                </p>
+                <p class="body-lg" style="color: var(--text-muted); margin-top: 1rem;">
+                    Agora vive uma nova fase com o <strong>almoço da casa</strong> — trazendo pratos executivos,
+                    especiais do dia e opções para toda a família. Uma casa com alma, história e presença real na
+                    cidade.
+                </p>
+                <div class="sobre-stats">
+                    <div class="sobre-stat reveal delay-1">
+                        <strong class="heading-lg" style="color: var(--bordeaux);">+26</strong>
+                        <span class="label-sm" style="color: var(--text-muted);">Anos de tradição</span>
+                    </div>
+                    <div class="sobre-stat reveal delay-2">
+                        <strong class="heading-lg" style="color: var(--bordeaux);">100%</strong>
+                        <span class="label-sm" style="color: var(--text-muted);">Artesanal</span>
+                    </div>
+                    <div class="sobre-stat reveal delay-3">
+                        <strong class="heading-lg" style="color: var(--bordeaux);">Forno</strong>
+                        <span class="label-sm" style="color: var(--text-muted);">a Lenha</span>
+                    </div>
+                </div>
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#almoco" class="btn btn-primary" id="saberAlmoco">Conhecer o almoço</a>
+                    <a href="#jantar" class="btn btn-outline-dark" id="saberJantar">Ver o jantar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ALMOÇO ===== -->
+    <section class="almoco-section section-pad" id="almoco">
+        <div class="almoco-header container">
+            <div class="ornament">
+                <span class="ornament-dot"></span>
+                <span class="label-sm" style="color: var(--amber);">Segunda a Sábado · 10h30–15h30</span>
+                <span class="ornament-line"></span>
+            </div>
+            <h2 class="display-md reveal" style="color: var(--warm-white);">O novo almoço<br /><em>da Dom Fratello</em>
+            </h2>
+            <p class="body-lg reveal delay-1" style="color: rgba(255,255,255,0.75); max-width: 600px;">
+                Pratos executivos e especiais do dia com sabor, tradição e variedade. <br />
+                <strong style="color: var(--amber-pale);">Todos os pratos acompanham salada de entrada como
+                    cortesia.</strong>
+            </p>
+        </div>
+
+        <!-- Pratos do dia -->
+        <div class="container">
+            <h3 class="heading-md reveal" style="color: var(--amber-light); margin: 3rem 0 1.5rem; text-align: center;">
+                Especiais do Dia</h3>
+            <div class="pratos-dia-grid">
+                <div class="prato-dia-card reveal delay-1">
+                    <div class="prato-dia-cover" style="background-image: url('./prato_segunda.png')"></div>
+                    <div class="prato-dia-overlay">
+                        <span class="prato-dia-dia label-sm">Segunda</span>
+                        <h4 class="prato-dia-nome heading-md">Virado à Paulista</h4>
+                        <p class="prato-dia-desc">Um clássico paulistano servido com orgulho e fartura.</p>
+                    </div>
+                </div>
+                <div class="prato-dia-card reveal delay-2">
+                    <div class="prato-dia-cover" style="background-image: url('./prato_terca.png')"></div>
+                    <div class="prato-dia-overlay">
+                        <span class="prato-dia-dia label-sm">Terça</span>
+                        <h4 class="prato-dia-nome heading-md">Braciola / Bife à Rolê</h4>
+                        <p class="prato-dia-desc">Tradição italiana com toque brasileiro, carne recheada e suculenta.
+                        </p>
+                    </div>
+                </div>
+                <div class="prato-dia-card reveal delay-3">
+                    <div class="prato-dia-cover" style="background-image: url('./prato_quarta.png')"></div>
+                    <div class="prato-dia-overlay">
+                        <span class="prato-dia-dia label-sm">Quarta</span>
+                        <h4 class="prato-dia-nome heading-md">Feijoada Executiva</h4>
+                        <p class="prato-dia-desc">Feijoada completa no ponto certo, feita com carinho.</p>
+                    </div>
+                </div>
+                <div class="prato-dia-card reveal delay-1">
+                    <div class="prato-dia-cover" style="background-image: url('./prato_quinta.png')"></div>
+                    <div class="prato-dia-overlay">
+                        <span class="prato-dia-dia label-sm">Quinta</span>
+                        <h4 class="prato-dia-nome heading-md">Nhoque Artesanal</h4>
+                        <p class="prato-dia-desc">Massa feita na casa, leve e saborosa com molho da tradição.</p>
+                    </div>
+                </div>
+                <div class="prato-dia-card reveal delay-2">
+                    <div class="prato-dia-cover" style="background-image: url('./prato_sexta.png')"></div>
+                    <div class="prato-dia-overlay">
+                        <span class="prato-dia-dia label-sm">Sexta</span>
+                        <h4 class="prato-dia-nome heading-md">Peixe com Camarão</h4>
+                        <p class="prato-dia-desc">O mar na sua mesa — peixe fresco com camarão ao molho.</p>
+                    </div>
+                </div>
+                <div class="prato-dia-card prato-dia-destaque reveal delay-3">
+                    <div class="prato-dia-cover" style="background-image: url('./prato_sabado.png')"></div>
+                    <div class="prato-dia-overlay">
+                        <span class="prato-dia-dia label-sm">Sábado</span>
+                        <h4 class="prato-dia-nome heading-md">Feijoada da Casa</h4>
+                        <p class="prato-dia-desc">A feijoada completa da Dom Fratello. A melhor da cidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Executivos mais pedidos -->
+        <div class="container executivos-wrap" style="text-align: center;">
+            <h3 class="heading-md" style="color: var(--amber-light); margin-bottom: 2rem;">Os Executivos Mais Pedidos
+            </h3>
+            <div class="executivos-cards-grid">
+                <div class="executivo-card reveal delay-1">
+                    <div class="executivo-card-img" style="background-image: url('./picadinho.png')"></div>
+                    <div class="executivo-card-overlay">
+                        <h4>Picadinho</h4>
+                        <p>O queridinho do almoço, saboroso e reconfortante.</p>
+                    </div>
+                </div>
+                <div class="executivo-card reveal delay-2">
+                    <div class="executivo-card-img" style="background-image: url('./Contra-filé à Brasileira.png')">
+                    </div>
+                    <div class="executivo-card-overlay">
+                        <h4>Contra-filé à Brasileira</h4>
+                        <p>Uma refeição completa para os amantes da boa carne.</p>
+                    </div>
+                </div>
+                <div class="executivo-card reveal delay-3">
+                    <div class="executivo-card-img" style="background-image: url('./talharim.png')"></div>
+                    <div class="executivo-card-overlay">
+                        <h4>Talharim ao Sugo</h4>
+                        <p>Massa fresca envolvida no nosso molho artesanal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="salada-notice reveal delay-2" style="max-width: 600px; margin: 2rem auto 0 auto;">
+                <i data-lucide="salad" style="width:16px;height:16px;vertical-align:middle;"></i> Todos os pratos
+                acompanham <strong>salada de entrada</strong> como cortesia.
+            </div>
+        </div>
+        <div class="container" style="text-align:center; margin-top: 3rem;">
+            <a href="https://wa.me/551141581318?text=Vim%20pelo%20site%2C%20gostaria%20de%20informa%C3%A7%C3%B5es"
+                target="_blank" class="btn btn-amber" id="pedirAlmocoWhats">Pedir
+                Almoço no WhatsApp</a>
+        </div>
+
+        <!-- PARMEGIANA — WORLD CLASS SPOTLIGHT -->
+        <div class="parmegiana-spotlight">
+            <div class="container parmegiana-grid">
+                <div class="parm-visual reveal-left">
+                    <div class="parm-img-frame">
+                        <img src="./parmegiana.png" alt="Parmegiana Dom Fratello">
+                    </div>
+                </div>
+                <div class="parm-content reveal-right">
+                    <span class="parm-badge">Especialidade Suprema</span>
+                    <h2 class="parm-title">O Grande Carro<br /><em>Chefe da Casa.</em></h2>
+                    <p class="parm-description">
+                        Um prato lendário que atravessa gerações. Nossa parmegiana é preparada com cortes selecionados,
+                        cobertos com um molho de tomates frescos totalmente artesanal e gratinados à perfeição.
+                    </p>
+                    <div class="parm-specs">
+                        <div class="parm-spec-item">
+                            <span>Variedade</span>
+                            <strong>Mignon, Filé ou Frango</strong>
+                        </div>
+                        <div class="parm-spec-item">
+                            <span>Sabor</span>
+                            <strong>Molho 100% Caseiro</strong>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/551141581318?text=Quero%20pedir%20uma%20Parmegiana!" target="_blank"
+                        class="btn btn-primary btn-lg">Pedir no WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== JANTAR ===== -->
+    <section class="jantar-section section-pad" id="jantar">
+        <div class="jantar-fundo-img" style="background-image: url('./fundovinho.png')"></div>
+        <div class="jantar-fundo-overlay"></div>
+        <div class="container jantar-header" style="position:relative;z-index:2;">
+            <div class="ornament">
+                <span class="ornament-dot"></span>
+                <span class="label-sm" style="color: var(--amber);">Diariamente a partir das 18h</span>
+                <span class="ornament-line" style="background: rgba(255,255,255,0.2);"></span>
+            </div>
+            <h2 class="display-md reveal" style="color: var(--warm-white);">
+                À noite, a tradição ganha<br /><em>fogo, aroma e experiência.</em>
+            </h2>
+            <p class="body-lg reveal delay-1" style="color: rgba(255,255,255,0.7); max-width: 580px;">
+                Forno a lenha, pizzas artesanais, massas, risotos, pratos especiais e sobremesas para viver a Dom
+                Fratello por completo.
+            </p>
+        </div>
+        <div class="container jantar-grid" style="position:relative;z-index:2;">
+            <!-- Pizzas -->
+            <div class="jantar-card-portal reveal delay-1">
+                <div class="jantar-portal-visual">
+                    <div class="jantar-portal-img" style="background-image: url('./pizza1.png')"></div>
+                </div>
+                <div class="jantar-portal-info">
+                    <span>Especialidade</span>
+                    <h3>Pizzas Artesanais</h3>
+                </div>
+            </div>
+            <!-- Entrada -->
+            <div class="jantar-card-portal reveal delay-2">
+                <div class="jantar-portal-visual">
+                    <div class="jantar-portal-img" style="background-image: url('./entrada.png')"></div>
+                </div>
+                <div class="jantar-portal-info">
+                    <span>Para Começar</span>
+                    <h3>Entradas</h3>
+                </div>
+            </div>
+            <!-- Massas -->
+            <div class="jantar-card-portal reveal delay-3">
+                <div class="jantar-portal-visual">
+                    <div class="jantar-portal-img" style="background-image: url('./massa.png')"></div>
+                </div>
+                <div class="jantar-portal-info">
+                    <span>Tradição</span>
+                    <h3>Massas</h3>
+                </div>
+            </div>
+            <!-- Risotos -->
+            <div class="jantar-card-portal reveal delay-4">
+                <div class="jantar-portal-visual">
+                    <div class="jantar-portal-img" style="background-image: url('./fundovinho.png')"></div>
+                </div>
+                <div class="jantar-portal-info">
+                    <span>Sofisticação</span>
+                    <h3>Risotos</h3>
+                </div>
+            </div>
+            <!-- Carnes -->
+            <div class="jantar-card-portal reveal delay-1">
+                <div class="jantar-portal-visual">
+                    <div class="jantar-portal-img" style="background-image: url('./carne.png')"></div>
+                </div>
+                <div class="jantar-portal-info">
+                    <span>Grelhados</span>
+                    <h3>Carnes</h3>
+                </div>
+            </div>
+            <!-- Frutos do Mar -->
+            <div class="jantar-card-portal reveal delay-2">
+                <div class="jantar-portal-visual">
+                    <div class="jantar-portal-img" style="background-image: url('./frutosdomar.png')"></div>
+                </div>
+                <div class="jantar-portal-info">
+                    <span>Frescor</span>
+                    <h3>Frutos do Mar</h3>
+                </div>
+            </div>
+            <!-- Porções -->
+            <div class="jantar-card-portal reveal delay-3">
+                <div class="jantar-portal-visual">
+                    <div class="jantar-portal-img" style="background-image: url('./porcaom.png')"></div>
+                </div>
+                <div class="jantar-portal-info">
+                    <span>Para Dividir</span>
+                    <h3>Porções</h3>
+                </div>
+            </div>
+            <!-- Caldos -->
+            <div class="jantar-card-portal reveal delay-4">
+                <div class="jantar-portal-visual">
+                    <div class="jantar-portal-img" style="background-image: url('./caldo.png')"></div>
+                </div>
+                <div class="jantar-portal-info">
+                    <span>Conforto</span>
+                    <h3>Caldos</h3>
+                </div>
+            </div>
+            <!-- Pizzas Fritas -->
+            <div class="jantar-card-portal reveal delay-1">
+                <div class="jantar-portal-visual">
+                    <div class="jantar-portal-img" style="background-image: url('./pizzafrita.png')"></div>
+                </div>
+                <div class="jantar-portal-info">
+                    <span>Diferente</span>
+                    <h3>Pizzas Fritas</h3>
+                </div>
+            </div>
+            <!-- Sobremesas -->
+            <div class="jantar-card-portal reveal delay-2">
+                <div class="jantar-portal-visual">
+                    <div class="jantar-portal-img" style="background-image: url('./sobremesa.png')"></div>
+                </div>
+                <div class="jantar-portal-info">
+                    <span>Para Finalizar</span>
+                    <h3>Sobremesas</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container"
+            style="position:relative;z-index:2;text-align:center; margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://www.ifood.com.br/delivery/vargem-grande-paulista-sp/dom-fratello-pizzaria--restaurante-jardim-floresta/a80ad78d-c973-4079-9353-b38ccee9f5da"
+                target="_blank" class="btn btn-primary" id="ifoodJantar">Pedir no iFood</a>
+            <a href="https://wa.me/551141581318?text=Vim%20pelo%20site%2C%20gostaria%20de%20informa%C3%A7%C3%B5es"
+                target="_blank" class="btn btn-outline-light" id="reservarJantarBtn">Reservar / WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- ===== SEÇÃO TRADIÇÃO PIZZA (NOVA) ===== -->
+    <section class="pizza-tradicao section-pad" id="pizza-historia">
+        <div class="container">
+            <div class="pizza-tradicao-header reveal-left" style="margin-bottom: 4rem; max-width: 800px;">
+                <div class="ornament">
+                    <span class="ornament-dot"></span>
+                    <span class="label-sm" style="color: var(--amber);">Referência na Região</span>
+                    <span class="ornament-line"></span>
+                </div>
+                <h2 class="display-lg" style="color: var(--bordeaux); margin: 1rem 0 2rem;">26 anos de<br /><em>Pura
+                        Tradição.</em></h2>
+                <p class="body-lg" style="color: var(--text-muted);">
+                    Nossa história é escrita com o fogo do forno a lenha e a paixão pela verdadeira pizza artesanal.
+                    Há mais de duas décadas, a Dom Fratello é o destino de quem busca o equilíbrio perfeito entre
+                    massa crocante e recheios generosos.
+                </p>
+            </div>
+
+            <!-- vitrine Masonry Premium (Apenas Pizzas) -->
+            <div class="pizza-gallery-premium reveal-up">
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="./pizza1.png" alt="Pizza Dom Fratello 1">
+                    <div class="gallery-item-overlay"></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="./pizza2.png" alt="Pizza Dom Fratello 2">
+                    <div class="gallery-item-overlay"></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="./pizza3.png" alt="Pizza Dom Fratello 3">
+                    <div class="gallery-item-overlay"></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="./pizza4.png" alt="Pizza Dom Fratello 4">
+                    <div class="gallery-item-overlay"></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="./pizza5.png" alt="Pizza Dom Fratello 5">
+                    <div class="gallery-item-overlay"></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="./pizza6.png" alt="Pizza Dom Fratello 6">
+                    <div class="gallery-item-overlay"></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="./pizza7.png" alt="Pizza Dom Fratello 7">
+                    <div class="gallery-item-overlay"></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="./pizza8.png" alt="Pizza Dom Fratello 8">
+                    <div class="gallery-item-overlay"></div>
+                </div>
+            </div>
+
+            <div class="pizza-atributos-stats"
+                style="margin-top: 4rem; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 3rem;">
+                <div class="p-stat"><strong>26</strong><span>Anos de História</span></div>
+                <div class="p-stat"><strong>1ª</strong><span>Escolha da Cidade</span></div>
+                <div class="p-stat"><strong>100%</strong><span>Lenha e Afeto</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FORNO A LENHA ===== -->
+    <section class="forno-section" id="forno">
+        <div class="forno-bg" style="background-image: url('jantar_hero.png')"></div>
+        <div class="forno-overlay"></div>
+        <div class="container forno-content">
+            <div class="ornament" style="justify-content: flex-start;">
+                <span class="ornament-dot"></span>
+                <span class="label-sm" style="color: var(--amber-pale);">Artesanal · Autentico · Único</span>
+            </div>
+            <h2 class="display-lg reveal" style="color: var(--warm-white);">
+                O coração da noite:<br /><em>nosso forno a lenha.</em>
+            </h2>
+            <p class="body-lg reveal delay-1" style="color: rgba(255,255,255,0.78); max-width: 520px;">
+                É dele que saem as pizzas que fazem parte da história da Dom Fratello. Chama viva, calor artesanal e o
+                aroma que não se esquece.
+            </p>
+            <div class="forno-atributos reveal delay-2">
+                <span class="forno-attr">🔥 Forno a lenha</span>
+                <span class="forno-attr">🌾 72 horas de fermentação</span>
+                <span class="forno-attr">🧀 produtos selecionados</span>
+                <span class="forno-attr">🍅 Molho Artesanal</span>
+            </div>
+            <a href="https://wa.me/551141581318" target="_blank" class="btn btn-amber" style="margin-top: 2rem;"
+                id="pedirPizzaWhats">Pedir minha pizza</a>
+        </div>
+
+    </section>
+
+
+    <!-- Barra de marcas posicionada entre Forno e Bebidas -->
+    <div class="marcas-bar-inline"
+        style="background: #F2EDE4; padding: 3rem 0; border-top: 1px solid rgba(0,0,0,0.08); border-bottom: 1px solid rgba(0,0,0,0.08);">
+        <div class="marca-carousel-wrap">
+            <div class="marca-carousel">
+                <img src="./MARCAS/Friboi.png" alt="Friboi">
+                <img src="./MARCAS/Scala.png" alt="Scala">
+                <img src="./MARCAS/Catupiry.png" alt="Catupiry">
+                <img src="./MARCAS/Aurora.png" alt="Aurora">
+                <img src="./MARCAS/Sadia.png" alt="Sadia">
+                <img src="./MARCAS/Tirolez.png" alt="Tirolez">
+                <!-- Duplicatas para scroll contínuo -->
+                <img src="./MARCAS/Friboi.png" alt="Friboi">
+                <img src="./MARCAS/Scala.png" alt="Scala">
+                <img src="./MARCAS/Catupiry.png" alt="Catupiry">
+                <img src="./MARCAS/Aurora.png" alt="Aurora">
+                <img src="./MARCAS/Sadia.png" alt="Sadia">
+                <img src="./MARCAS/Tirolez.png" alt="Tirolez">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== BEBIDAS ===== -->
+    <section class="bebidas-section section-pad" id="bebidas" style="padding-bottom: 0;">
+        <div class="container" style="text-align:center; margin-bottom: 3rem;">
+            <div class="ornament" style="justify-content:center; margin-bottom:1rem;">
+                <span class="ornament-line"></span>
+                <span class="ornament-dot"></span>
+                <span class="label-sm" style="color: var(--bordeaux);">Carta Selecionada</span>
+                <span class="ornament-dot"></span>
+                <span class="ornament-line"></span>
+            </div>
+            <h2 class="display-md reveal" style="color: var(--charcoal);">Bebidas</h2>
+        </div>
+        <div class="container bebidas-grid">
+
+            <!-- VINHO BLOCO VISUAL (Novo) -->
+            <div class="bebida-bloco bebida-cerveja reveal-left">
+                <div class="bebida-cerveja-img" style="background-image: url('./vinho.png');"></div>
+                <div class="bebida-cerveja-overlay"
+                    style="background: linear-gradient(160deg, rgba(56, 11, 21, 0.85) 0%, rgba(20, 10, 14, 0.7) 100%);">
+                </div>
+                <div class="bebida-cerveja-content">
+                    <span class="label-sm" style="color: var(--amber-pale);">Harmonize</span>
+                    <h2 class="display-md" style="color: var(--warm-white);">Vinhos &<br /><em>Drinks.</em></h2>
+                    <p class="body-md" style="color: rgba(255,255,255,0.78); margin-top: 1rem;">
+                        Uma carta selecionada. Do almoço ao jantar, sempre há a bebida certa para a sua refeição.
+                    </p>
+                    <div class="cerveja-tipos">
+                        <span>Tinto</span>
+                        <span>Rosé</span>
+                        <span>Branco</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bebida-bloco bebida-cerveja reveal-right">
+                <div class="bebida-cerveja-img" style="background-image: url('./cerveja.png')"></div>
+                <div class="bebida-cerveja-overlay"></div>
+                <div class="bebida-cerveja-content">
+                    <span class="label-sm" style="color: var(--amber-pale);">Geladíssima</span>
+                    <h2 class="display-md" style="color: var(--warm-white);">Cerveja gelada<br /><em>de verdade.</em>
+                    </h2>
+                    <p class="body-md" style="color: rgba(255,255,255,0.78); margin-top: 1rem;">
+                        Long neck, garrafas e baldes servidos no ponto ideal. Do visor para a sua mesa, trincando.
+                    </p>
+                    <div class="cerveja-tipos">
+                        <span>Long Neck</span>
+                        <span>Garrafa</span>
+                        <span>Balde</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ===== HORÁRIOS ===== -->
+    <section class="horarios-section section-pad-sm" id="horarios">
+        <div class="container">
+            <div class="ornament" style="justify-content: center;">
+                <span class="ornament-line"></span>
+                <span class="ornament-dot"></span>
+                <span class="label-sm" style="color: var(--amber);">Horários da Casa</span>
+                <span class="ornament-dot"></span>
+                <span class="ornament-line"></span>
+            </div>
+            <h2 class="display-md reveal" style="text-align: center; color: var(--bordeaux); margin-bottom: 3rem;">
+                Quando nos visitar
+            </h2>
+            <div class="horarios-grid">
+                <div class="horario-card horario-almoco reveal delay-1">
+                    <div class="horario-icon"><i data-lucide="sun"></i></div>
+                    <span class="label-sm" style="color: var(--amber);">Almoço</span>
+                    <h3 class="heading-md">10h30 – 15h30</h3>
+                    <p class="body-md" style="color: var(--text-muted);">Segunda a Sábado</p>
+                    <p class="horario-obs">Pratos executivos, especiais do dia e menu infantil com salada cortesia</p>
+                </div>
+                <div class="horario-separator">
+                    <div class="horario-sep-line"></div>
+                    <div class="horario-df-badge">DF</div>
+                    <div class="horario-sep-line"></div>
+                </div>
+                <div class="horario-card horario-jantar reveal delay-2">
+                    <div class="horario-icon"><i data-lucide="flame"></i></div>
+                    <span class="label-sm" style="color: var(--amber);">Jantar</span>
+                    <h3 class="heading-md">18h00 – 23h00</h3>
+                    <p class="body-md" style="color: var(--text-muted);">Segunda a Quinta</p>
+                    <div class="horario-extra">
+                        <strong>18h00 – 23h30</strong>
+                        <span>Sexta e Finais de Semana</span>
+                    </div>
+                    <p class="horario-obs" style="margin-top: 0.75rem;">Pizzas artesanais, massas, risotos, pratos
+                        especiais e bebidas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCALIZAÇÃO ===== -->
+    <section class="localizacao-section section-pad" id="localizacao">
+        <div class="container localizacao-grid">
+            <div class="localizacao-info reveal-left">
+                <div class="ornament">
+                    <span class="ornament-dot"></span>
+                    <span class="label-sm" style="color: var(--amber);">Venha nos visitar</span>
+                </div>
+                <h2 class="display-md" style="color: var(--warm-white);">Venha viver<br /><em>a Dom Fratello</em></h2>
+                <div class="localizacao-dados">
+                    <div class="localizacao-item">
+                        <span class="localizacao-icone"><i data-lucide="map-pin"></i></span>
+                        <div>
+                            <strong>Endereço</strong>
+                            <p>R. Casuarinas, 164 - Jardim Floresta<br />Vargem Grande Paulista - SP, 06730-000</p>
+                        </div>
+                    </div>
+                    <div class="localizacao-item">
+                        <span class="localizacao-icone"><i data-lucide="phone"></i></span>
+                        <div>
+                            <strong>Telefones / WhatsApp</strong>
+                            <p>(11) 4158-1318 / (11) 95698-1231</p>
+                        </div>
+                    </div>
+                    <div class="localizacao-item">
+                        <span class="localizacao-icone"><i data-lucide="instagram"></i></span>
+                        <div>
+                            <strong>Instagram</strong>
+                            <p>@domfratello</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="localizacao-ctas">
+                    <a href="https://wa.me/551141581318?text=Vim%20pelo%20site%2C%20gostaria%20de%20informa%C3%A7%C3%B5es"
+                        target="_blank" class="btn btn-amber" id="whatsappLoc">WhatsApp</a>
+                    <a href="https://www.ifood.com.br/delivery/vargem-grande-paulista-sp/dom-fratello-pizzaria--restaurante-jardim-floresta/a80ad78d-c973-4079-9353-b38ccee9f5da"
+                        target="_blank" class="btn btn-outline-light" id="ifoodLoc">iFood</a>
+                    <a href="https://www.google.com/maps/place/Pizzaria+Dom+Fratello/@-23.6077686,-47.030702,17z/data=!3m1!4b1!4m6!3m5!1s0x1576512889f06c7:0x28307d082409ba1c!8m2!3d-23.6077686!4d-47.030702!16s%2Fg%2F1thx9s3r?entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank" class="btn btn-outline-light" id="rotasLoc">Como
+                        chegar ↗</a>
+                </div>
+            </div>
+            <div class="localizacao-map reveal-right">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.123!2d-47.030702!3d-23.6077686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1576512889f06c7%3A0x28307d082409ba1c!2sPizzaria%20Dom%20Fratello!5e0!3m2!1spt-BR!2sbr!4v1741700000000!5m2!1spt-BR!2sbr"
+                    width="100%" height="400" style="border:0; filter: grayscale(20%) contrast(1.1);" allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de contato removida -->
+
+    <!-- ===== INSTAGRAM ===== -->
+    <section class="instagram-section section-pad-sm" id="instagram">
+        <div class="container">
+            <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-2183d7c0-46ea-40e4-9de6-937d72e1fbd9" data-elfsight-app-lazy></div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="./logo.png" alt="Dom Fratello" style="max-height: 80px;">
+                </div>
+                <p class="body-md" style="color: rgba(255,255,255,0.6); margin-top: 1rem; max-width: 280px;">
+                    A tradição da noite, agora também no almoço. Uma casa com alma, história e presença real em Vargem
+                    Grande Paulista.
+                </p>
+                <div class="footer-sociais">
+                    <a href="https://instagram.com/domfratello" target="_blank" class="footer-social-btn"
+                        id="footerInsta"><i data-lucide="instagram"></i> Instagram</a>
+                    <a href="https://wa.me/551141581318?text=Vim%20pelo%20site%2C%20gostaria%20de%20informa%C3%A7%C3%B5es"
+                        target="_blank" class="footer-social-btn" id="footerWpp"><i data-lucide="message-circle"></i>
+                        WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title label-sm">Navegação</h4>
+                <ul>
+                    <li><a href="#sobre">A Casa</a></li>
+                    <li><a href="#almoco">Almoço</a></li>
+                    <li><a href="#jantar">Jantar</a></li>
+                    <li><a href="#bebidas">Bebidas</a></li>
+                    <li><a href="#horarios">Horários</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title label-sm">Horários</h4>
+                <p style="color: rgba(255,255,255,0.6);">
+                    <strong style="color: var(--amber-pale);">Almoço</strong><br />
+                    Seg–Sáb · 10h30 – 15h30
+                </p>
+                <p style="color: rgba(255,255,255,0.6); margin-top: 1rem;">
+                    <strong style="color: var(--amber-pale);">Jantar</strong><br />
+                    Tous os dias · 18h00 – 23h00<br />
+                    Sex & Fim de Semana até 23h30
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-col-title label-sm">Pedir Agora</h4>
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                    <a href="https://wa.me/551141581318?text=Vim%20pelo%20site%2C%20gostaria%20de%20informa%C3%A7%C3%B5es"
+                        target="_blank" class="btn btn-amber" style="justify-content: center;"
+                        id="footerPedirWhats">WhatsApp</a>
+                    <a href="https://www.ifood.com.br/delivery/vargem-grande-paulista-sp/dom-fratello-pizzaria--restaurante-jardim-floresta/a80ad78d-c973-4079-9353-b38ccee9f5da"
+                        target="_blank" class="btn btn-outline-light" style="justify-content: center;"
+                        id="footerPedirIfood">iFood</a>
+                    <a href="https://pedido.anota.ai/loja/dom-fratello-pizza-cia?f=ms" class="btn btn-outline-light"
+                        style="justify-content: center;" target="_blank" id="footerPedirOnline">Pedido Web</a>
+                </div>
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.8rem; margin-top: 1rem;">
+                    📍 R. Casuarinas, 164 - Jardim Floresta<br />Vargem Grande Paulista - SP, 06730-000
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Dom Fratello — Todos os direitos reservados.</p>
+            <div class="footer-dev" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <span>Desenvolvido por <strong>Uebi Studio</strong></span>
+                <div class="footer-logo-agency"
+                    style="width: 24px; height: 24px; background: rgba(255,255,255,0.1); border-radius: 4px; display: inline-block;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/551141581318?text=Vim%20pelo%20site%2C%20gostaria%20de%20informa%C3%A7%C3%B5es"
+        target="_blank" class="whatsapp-float" id="whatsappFloat" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+
+
+
+    <script src="./src/main.js"></script>
+
+    <!-- Lightbox Modal -->
+    <div id="gallery-lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Lightbox">
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            const imgSrc = element.querySelector('img').src;
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imgSrc;
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Trava scroll
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('gallery-lightbox');
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Reativa scroll
+        }
+    </script>
+</body>
+
+</html>
