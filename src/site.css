@@ -1091,7 +1091,9 @@
     align-items: center;
     gap: clamp(3rem, 8vw, 6rem);
     width: max-content;
-    animation: scrollLogos 25s linear infinite;
+    animation: scrollLogos 40s linear infinite; /* Aumentado o tempo para suavidade */
+    will-change: transform;
+    transform: translateZ(0);
 }
 
 .marca-carousel img {
@@ -1166,8 +1168,8 @@
     object-fit: cover;
 }
 @keyframes scrollLogos {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 2rem)); }
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); } /* -50% é o ponto exato de loop com duplicatas */
 }
 
 .tradicionais-carousel::-webkit-scrollbar {
