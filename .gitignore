@@ -2,11 +2,13 @@
 .gemini/
 *.log
 node_modules/
+package.json
 package-lock.json
-scripts/optimization-report.json
+scripts/
 *.png
 *.jpg
 *.jpeg
 !assets/images/**/*.webp
 !assets/images/**/*.png
 !assets/images/**/*.jpg
+!assets/images/uebi_logo.png
