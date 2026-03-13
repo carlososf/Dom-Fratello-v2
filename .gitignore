@@ -9,7 +9,7 @@ scripts/optimization-report.json
 *.png
 *.jpg
 *.jpeg
-!assets/images/**/*.webp
-!assets/images/**/*.png
-!assets/images/**/*.jpg
-!assets/images/uebi_logo.png
+!public/assets/images/**/*.webp
+!public/assets/images/**/*.png
+!public/assets/images/**/*.jpg
+!public/assets/images/uebi_logo.png
