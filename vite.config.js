@@ -1,15 +1,18 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  // Vite vai procurar o index.html na raiz por padrão
-  server: {
-    port: 3001,
-    open: true
-  },
+  root: './',
+  base: './',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    // Garante que o build entenda caminhos relativos se necessário
-    base: './'
-  }
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
+  },
+  // Faz o Vite ignorar o processamento de imagens e apenas movê-las se necessário
+  // mas o ideal é deixar ele processar para versionamento
+  publicDir: 'public' // Vou criar essa pasta e colocar as imagens lá para garantir 100% de sucesso
 });
