@@ -2,9 +2,9 @@
 .gemini/
 *.log
 node_modules/
-package.json
-package-lock.json
-scripts/
+dist/
+scripts/optimization-report.json
+
 *.png
 *.jpg
 *.jpeg
