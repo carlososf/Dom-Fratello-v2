@@ -1,3 +1,12 @@
 .agent/
 .gemini/
 *.log
+node_modules/
+package-lock.json
+scripts/optimization-report.json
+*.png
+*.jpg
+*.jpeg
+!assets/images/**/*.webp
+!assets/images/**/*.png
+!assets/images/**/*.jpg

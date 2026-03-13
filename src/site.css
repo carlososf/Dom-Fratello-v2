@@ -311,7 +311,7 @@
 /* Mobile: troca hero para herocel.png */
 @media (max-width: 768px) {
     .hero-clean-bg {
-        background-image: url('../herocel.png') !important;
+        background-image: url('../assets/images/hero/herocel.webp') !important;
         background-position: center center;
     }
 }

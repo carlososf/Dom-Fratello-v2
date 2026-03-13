@@ -12,7 +12,7 @@
     <meta property="og:title" content="Dom Fratello — Restaurante & Pizzaria" />
     <meta property="og:description"
         content="Tradição, sabor e acolhimento em cada refeição. Almoço e jantar em Vargem Grande Paulista." />
-    <meta property="og:image" content="./almoco_hero.png" />
+    <meta property="og:image" content="./assets/images/hero/almoco_hero.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,7 +30,10 @@
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
             <a href="#home" class="nav-logo">
-                <img src="./logo.png" alt="Dom Fratello" style="max-height: 50px;">
+                <picture>
+                    <source srcset="./assets/images/thumbs/logo.webp" type="image/webp">
+                    <img src="./assets/images/thumbs/logo.png" alt="Dom Fratello" style="max-height: 50px;">
+                </picture>
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#sobre">A Casa</a></li>
@@ -64,7 +67,7 @@
     <section class="hero-clean" id="home">
 
         <!-- Imagem de fundo -->
-        <div class="hero-clean-bg" style="background-image: url('./heropc.png')"></div>
+        <div class="hero-clean-bg" style="background-image: url('./assets/images/hero/heropc.webp')"></div>
 
         <!-- Overlay suave apenas na base para os botões ficarem legíveis -->
         <div class="hero-clean-overlay"></div>
@@ -159,13 +162,34 @@
         <div class="container sobre-grid">
             <div class="sobre-visual reveal-left">
                 <div class="casa-carousel-fade" id="casaCarouselFade">
-                    <img src="./ambiente1.png" alt="Ambiente Dom Fratello" class="active" />
-                    <img src="./ambiente2.png" alt="Ambiente Dom Fratello" />
-                    <img src="./ambiente3.png" alt="Ambiente Dom Fratello" />
-                    <img src="./ambiente4.png" alt="Ambiente Dom Fratello" />
-                    <img src="./ambiente5.png" alt="Ambiente Dom Fratello" />
-                    <img src="./ambiente6.png" alt="Ambiente Dom Fratello" />
-                    <img src="./ambiente7.png" alt="Ambiente Dom Fratello" />
+                    <picture>
+                        <source srcset="./assets/images/projetos/ambiente1.webp" type="image/webp">
+                        <img src="./assets/images/projetos/ambiente1.png" alt="Ambiente Dom Fratello" class="active" loading="lazy" />
+                    </picture>
+                    <picture>
+                        <source srcset="./assets/images/projetos/ambiente2.webp" type="image/webp">
+                        <img src="./assets/images/projetos/ambiente2.png" alt="Ambiente Dom Fratello" loading="lazy" />
+                    </picture>
+                    <picture>
+                        <source srcset="./assets/images/projetos/ambiente3.webp" type="image/webp">
+                        <img src="./assets/images/projetos/ambiente3.png" alt="Ambiente Dom Fratello" loading="lazy" />
+                    </picture>
+                    <picture>
+                        <source srcset="./assets/images/projetos/ambiente4.webp" type="image/webp">
+                        <img src="./assets/images/projetos/ambiente4.png" alt="Ambiente Dom Fratello" loading="lazy" />
+                    </picture>
+                    <picture>
+                        <source srcset="./assets/images/projetos/ambiente5.webp" type="image/webp">
+                        <img src="./assets/images/projetos/ambiente5.png" alt="Ambiente Dom Fratello" loading="lazy" />
+                    </picture>
+                    <picture>
+                        <source srcset="./assets/images/projetos/ambiente6.webp" type="image/webp">
+                        <img src="./assets/images/projetos/ambiente6.png" alt="Ambiente Dom Fratello" loading="lazy" />
+                    </picture>
+                    <picture>
+                        <source srcset="./assets/images/projetos/ambiente7.webp" type="image/webp">
+                        <img src="./assets/images/projetos/ambiente7.png" alt="Ambiente Dom Fratello" loading="lazy" />
+                    </picture>
                 </div>
             </div>
             <div class="sobre-content reveal-right">
@@ -232,7 +256,7 @@
                 Especiais do Dia</h3>
             <div class="pratos-dia-grid">
                 <div class="prato-dia-card reveal delay-1">
-                    <div class="prato-dia-cover" style="background-image: url('./prato_segunda.png')"></div>
+                    <div class="prato-dia-cover" style="background-image: url('./assets/images/projetos/prato_segunda.webp')"></div>
                     <div class="prato-dia-overlay">
                         <span class="prato-dia-dia label-sm">Segunda</span>
                         <h4 class="prato-dia-nome heading-md">Virado à Paulista</h4>
@@ -240,7 +264,7 @@
                     </div>
                 </div>
                 <div class="prato-dia-card reveal delay-2">
-                    <div class="prato-dia-cover" style="background-image: url('./prato_terca.png')"></div>
+                    <div class="prato-dia-cover" style="background-image: url('./assets/images/projetos/prato_terca.webp')"></div>
                     <div class="prato-dia-overlay">
                         <span class="prato-dia-dia label-sm">Terça</span>
                         <h4 class="prato-dia-nome heading-md">Braciola / Bife à Rolê</h4>
@@ -249,7 +273,7 @@
                     </div>
                 </div>
                 <div class="prato-dia-card reveal delay-3">
-                    <div class="prato-dia-cover" style="background-image: url('./prato_quarta.png')"></div>
+                    <div class="prato-dia-cover" style="background-image: url('./assets/images/projetos/prato_quarta.webp')"></div>
                     <div class="prato-dia-overlay">
                         <span class="prato-dia-dia label-sm">Quarta</span>
                         <h4 class="prato-dia-nome heading-md">Feijoada Executiva</h4>
@@ -257,7 +281,7 @@
                     </div>
                 </div>
                 <div class="prato-dia-card reveal delay-1">
-                    <div class="prato-dia-cover" style="background-image: url('./prato_quinta.png')"></div>
+                    <div class="prato-dia-cover" style="background-image: url('./assets/images/projetos/prato_quinta.webp')"></div>
                     <div class="prato-dia-overlay">
                         <span class="prato-dia-dia label-sm">Quinta</span>
                         <h4 class="prato-dia-nome heading-md">Nhoque Artesanal</h4>
@@ -265,7 +289,7 @@
                     </div>
                 </div>
                 <div class="prato-dia-card reveal delay-2">
-                    <div class="prato-dia-cover" style="background-image: url('./prato_sexta.png')"></div>
+                    <div class="prato-dia-cover" style="background-image: url('./assets/images/projetos/prato_sexta.webp')"></div>
                     <div class="prato-dia-overlay">
                         <span class="prato-dia-dia label-sm">Sexta</span>
                         <h4 class="prato-dia-nome heading-md">Peixe com Camarão</h4>
@@ -273,7 +297,7 @@
                     </div>
                 </div>
                 <div class="prato-dia-card prato-dia-destaque reveal delay-3">
-                    <div class="prato-dia-cover" style="background-image: url('./prato_sabado.png')"></div>
+                    <div class="prato-dia-cover" style="background-image: url('./assets/images/projetos/prato_sabado.webp')"></div>
                     <div class="prato-dia-overlay">
                         <span class="prato-dia-dia label-sm">Sábado</span>
                         <h4 class="prato-dia-nome heading-md">Feijoada da Casa</h4>
@@ -289,14 +313,14 @@
             </h3>
             <div class="executivos-cards-grid">
                 <div class="executivo-card reveal delay-1">
-                    <div class="executivo-card-img" style="background-image: url('./picadinho.png')"></div>
+                    <div class="executivo-card-img" style="background-image: url('./assets/images/projetos/picadinho.webp')"></div>
                     <div class="executivo-card-overlay">
                         <h4>Picadinho</h4>
                         <p>O queridinho do almoço, saboroso e reconfortante.</p>
                     </div>
                 </div>
                 <div class="executivo-card reveal delay-2">
-                    <div class="executivo-card-img" style="background-image: url('./Contra-filé à Brasileira.png')">
+                    <div class="executivo-card-img" style="background-image: url('./assets/images/projetos/Contra-filé à Brasileira.webp')">
                     </div>
                     <div class="executivo-card-overlay">
                         <h4>Contra-filé à Brasileira</h4>
@@ -304,7 +328,7 @@
                     </div>
                 </div>
                 <div class="executivo-card reveal delay-3">
-                    <div class="executivo-card-img" style="background-image: url('./talharim.png')"></div>
+                    <div class="executivo-card-img" style="background-image: url('./assets/images/projetos/talharim.webp')"></div>
                     <div class="executivo-card-overlay">
                         <h4>Talharim ao Sugo</h4>
                         <p>Massa fresca envolvida no nosso molho artesanal.</p>
@@ -328,7 +352,13 @@
             <div class="container parmegiana-grid">
                 <div class="parm-visual reveal-left">
                     <div class="parm-img-frame">
-                        <img src="./parmegiana.png" alt="Parmegiana Dom Fratello">
+                        <picture>
+                            <source srcset="./assets/images/projetos/parmegiana.webp" type="image/webp">
+                            <img src="./assets/images/projetos/parmegiana.png" 
+                                 srcset="./assets/images/projetos/parmegiana-400.webp 400w, ./assets/images/projetos/parmegiana-800.webp 800w, ./assets/images/projetos/parmegiana-1200.webp 1200w"
+                                 sizes="(max-width: 768px) 100vw, 600px"
+                                 alt="Parmegiana Dom Fratello" loading="lazy">
+                        </picture>
                     </div>
                 </div>
                 <div class="parm-content reveal-right">
@@ -357,7 +387,7 @@
 
     <!-- ===== JANTAR ===== -->
     <section class="jantar-section section-pad" id="jantar">
-        <div class="jantar-fundo-img" style="background-image: url('./fundovinho.png')"></div>
+        <div class="jantar-fundo-img" style="background-image: url('./assets/images/hero/fundovinho.webp')"></div>
         <div class="jantar-fundo-overlay"></div>
         <div class="container jantar-header" style="position:relative;z-index:2;">
             <div class="ornament">
@@ -377,7 +407,7 @@
             <!-- Pizzas -->
             <div class="jantar-card-portal reveal delay-1">
                 <div class="jantar-portal-visual">
-                    <div class="jantar-portal-img" style="background-image: url('./pizza1.png')"></div>
+                    <div class="jantar-portal-img" style="background-image: url('./assets/images/projetos/pizza1.webp')"></div>
                 </div>
                 <div class="jantar-portal-info">
                     <span>Especialidade</span>
@@ -387,7 +417,7 @@
             <!-- Entrada -->
             <div class="jantar-card-portal reveal delay-2">
                 <div class="jantar-portal-visual">
-                    <div class="jantar-portal-img" style="background-image: url('./entrada.png')"></div>
+                    <div class="jantar-portal-img" style="background-image: url('./assets/images/projetos/entrada.webp')"></div>
                 </div>
                 <div class="jantar-portal-info">
                     <span>Para Começar</span>
@@ -397,7 +427,7 @@
             <!-- Massas -->
             <div class="jantar-card-portal reveal delay-3">
                 <div class="jantar-portal-visual">
-                    <div class="jantar-portal-img" style="background-image: url('./massa.png')"></div>
+                    <div class="jantar-portal-img" style="background-image: url('./assets/images/projetos/massa.webp')"></div>
                 </div>
                 <div class="jantar-portal-info">
                     <span>Tradição</span>
@@ -407,7 +437,7 @@
             <!-- Risotos -->
             <div class="jantar-card-portal reveal delay-4">
                 <div class="jantar-portal-visual">
-                    <div class="jantar-portal-img" style="background-image: url('./fundovinho.png')"></div>
+                    <div class="jantar-portal-img" style="background-image: url('./assets/images/projetos/fundovinho.webp')"></div>
                 </div>
                 <div class="jantar-portal-info">
                     <span>Sofisticação</span>
@@ -417,7 +447,7 @@
             <!-- Carnes -->
             <div class="jantar-card-portal reveal delay-1">
                 <div class="jantar-portal-visual">
-                    <div class="jantar-portal-img" style="background-image: url('./carne.png')"></div>
+                    <div class="jantar-portal-img" style="background-image: url('./assets/images/projetos/carne.webp')"></div>
                 </div>
                 <div class="jantar-portal-info">
                     <span>Grelhados</span>
@@ -427,7 +457,7 @@
             <!-- Frutos do Mar -->
             <div class="jantar-card-portal reveal delay-2">
                 <div class="jantar-portal-visual">
-                    <div class="jantar-portal-img" style="background-image: url('./frutosdomar.png')"></div>
+                    <div class="jantar-portal-img" style="background-image: url('./assets/images/projetos/frutosdomar.webp')"></div>
                 </div>
                 <div class="jantar-portal-info">
                     <span>Frescor</span>
@@ -437,7 +467,7 @@
             <!-- Porções -->
             <div class="jantar-card-portal reveal delay-3">
                 <div class="jantar-portal-visual">
-                    <div class="jantar-portal-img" style="background-image: url('./porcaom.png')"></div>
+                    <div class="jantar-portal-img" style="background-image: url('./assets/images/projetos/porcaom.webp')"></div>
                 </div>
                 <div class="jantar-portal-info">
                     <span>Para Dividir</span>
@@ -447,7 +477,7 @@
             <!-- Caldos -->
             <div class="jantar-card-portal reveal delay-4">
                 <div class="jantar-portal-visual">
-                    <div class="jantar-portal-img" style="background-image: url('./caldo.png')"></div>
+                    <div class="jantar-portal-img" style="background-image: url('./assets/images/projetos/caldo.webp')"></div>
                 </div>
                 <div class="jantar-portal-info">
                     <span>Conforto</span>
@@ -457,7 +487,7 @@
             <!-- Pizzas Fritas -->
             <div class="jantar-card-portal reveal delay-1">
                 <div class="jantar-portal-visual">
-                    <div class="jantar-portal-img" style="background-image: url('./pizzafrita.png')"></div>
+                    <div class="jantar-portal-img" style="background-image: url('./assets/images/projetos/pizzafrita.webp')"></div>
                 </div>
                 <div class="jantar-portal-info">
                     <span>Diferente</span>
@@ -467,7 +497,7 @@
             <!-- Sobremesas -->
             <div class="jantar-card-portal reveal delay-2">
                 <div class="jantar-portal-visual">
-                    <div class="jantar-portal-img" style="background-image: url('./sobremesa.png')"></div>
+                    <div class="jantar-portal-img" style="background-image: url('./assets/images/projetos/sobremesa.webp')"></div>
                 </div>
                 <div class="jantar-portal-info">
                     <span>Para Finalizar</span>
@@ -505,35 +535,59 @@
             <!-- vitrine Masonry Premium (Apenas Pizzas) -->
             <div class="pizza-gallery-premium reveal-up">
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="./pizza1.png" alt="Pizza Dom Fratello 1">
+                    <img src="./assets/images/projetos/pizza1.webp" 
+                         srcset="./assets/images/projetos/pizza1-400.webp 400w, ./assets/images/projetos/pizza1-800.webp 800w"
+                         sizes="(max-width: 600px) 100vw, 400px"
+                         alt="Pizza Dom Fratello 1" loading="lazy">
                     <div class="gallery-item-overlay"></div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="./pizza2.png" alt="Pizza Dom Fratello 2">
+                    <img src="./assets/images/projetos/pizza2.webp" 
+                         srcset="./assets/images/projetos/pizza2-400.webp 400w, ./assets/images/projetos/pizza2-800.webp 800w"
+                         sizes="(max-width: 600px) 100vw, 400px"
+                         alt="Pizza Dom Fratello 2" loading="lazy">
                     <div class="gallery-item-overlay"></div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="./pizza3.png" alt="Pizza Dom Fratello 3">
+                    <img src="./assets/images/projetos/pizza3.webp" 
+                         srcset="./assets/images/projetos/pizza3-400.webp 400w, ./assets/images/projetos/pizza3-800.webp 800w"
+                         sizes="(max-width: 600px) 100vw, 400px"
+                         alt="Pizza Dom Fratello 3" loading="lazy">
                     <div class="gallery-item-overlay"></div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="./pizza4.png" alt="Pizza Dom Fratello 4">
+                    <img src="./assets/images/projetos/pizza4.webp" 
+                         srcset="./assets/images/projetos/pizza4-400.webp 400w, ./assets/images/projetos/pizza4-800.webp 800w"
+                         sizes="(max-width: 600px) 100vw, 400px"
+                         alt="Pizza Dom Fratello 4" loading="lazy">
                     <div class="gallery-item-overlay"></div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="./pizza5.png" alt="Pizza Dom Fratello 5">
+                    <img src="./assets/images/projetos/pizza5.webp" 
+                         srcset="./assets/images/projetos/pizza5-400.webp 400w, ./assets/images/projetos/pizza5-800.webp 800w"
+                         sizes="(max-width: 600px) 100vw, 400px"
+                         alt="Pizza Dom Fratello 5" loading="lazy">
                     <div class="gallery-item-overlay"></div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="./pizza6.png" alt="Pizza Dom Fratello 6">
+                    <img src="./assets/images/projetos/pizza6.webp" 
+                         srcset="./assets/images/projetos/pizza6-400.webp 400w, ./assets/images/projetos/pizza6-800.webp 800w"
+                         sizes="(max-width: 600px) 100vw, 400px"
+                         alt="Pizza Dom Fratello 6" loading="lazy">
                     <div class="gallery-item-overlay"></div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="./pizza7.png" alt="Pizza Dom Fratello 7">
+                    <img src="./assets/images/projetos/pizza7.webp" 
+                         srcset="./assets/images/projetos/pizza7-400.webp 400w, ./assets/images/projetos/pizza7-800.webp 800w"
+                         sizes="(max-width: 600px) 100vw, 400px"
+                         alt="Pizza Dom Fratello 7" loading="lazy">
                     <div class="gallery-item-overlay"></div>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="./pizza8.png" alt="Pizza Dom Fratello 8">
+                    <img src="./assets/images/projetos/pizza8.webp" 
+                         srcset="./assets/images/projetos/pizza8-400.webp 400w, ./assets/images/projetos/pizza8-800.webp 800w"
+                         sizes="(max-width: 600px) 100vw, 400px"
+                         alt="Pizza Dom Fratello 8" loading="lazy">
                     <div class="gallery-item-overlay"></div>
                 </div>
             </div>
@@ -549,7 +603,7 @@
 
     <!-- ===== FORNO A LENHA ===== -->
     <section class="forno-section" id="forno">
-        <div class="forno-bg" style="background-image: url('jantar_hero.png')"></div>
+        <div class="forno-bg" style="background-image: url('./assets/images/hero/jantar_hero.webp')"></div>
         <div class="forno-overlay"></div>
         <div class="container forno-content">
             <div class="ornament" style="justify-content: flex-start;">
@@ -581,19 +635,19 @@
         style="background: #F2EDE4; padding: 3rem 0; border-top: 1px solid rgba(0,0,0,0.08); border-bottom: 1px solid rgba(0,0,0,0.08);">
         <div class="marca-carousel-wrap">
             <div class="marca-carousel">
-                <img src="./MARCAS/friboi.png" alt="Friboi">
-                <img src="./MARCAS/scala.png" alt="Scala">
-                <img src="./MARCAS/catupiry.png" alt="Catupiry">
-                <img src="./MARCAS/aurora.png" alt="Aurora">
-                <img src="./MARCAS/sadia.png" alt="Sadia">
-                <img src="./MARCAS/tirolez.png" alt="Tirolez">
+                <img src="./assets/images/marcas/friboi.webp" alt="Friboi" loading="lazy">
+                <img src="./assets/images/marcas/scala.webp" alt="Scala" loading="lazy">
+                <img src="./assets/images/marcas/catupiry.webp" alt="Catupiry" loading="lazy">
+                <img src="./assets/images/marcas/aurora.webp" alt="Aurora" loading="lazy">
+                <img src="./assets/images/marcas/sadia.webp" alt="Sadia" loading="lazy">
+                <img src="./assets/images/marcas/tirolez.webp" alt="Tirolez" loading="lazy">
                 <!-- Duplicatas para scroll contínuo -->
-                <img src="./MARCAS/friboi.png" alt="Friboi">
-                <img src="./MARCAS/scala.png" alt="Scala">
-                <img src="./MARCAS/catupiry.png" alt="Catupiry">
-                <img src="./MARCAS/aurora.png" alt="Aurora">
-                <img src="./MARCAS/sadia.png" alt="Sadia">
-                <img src="./MARCAS/tirolez.png" alt="Tirolez">
+                <img src="./assets/images/marcas/friboi.webp" alt="Friboi" loading="lazy">
+                <img src="./assets/images/marcas/scala.webp" alt="Scala" loading="lazy">
+                <img src="./assets/images/marcas/catupiry.webp" alt="Catupiry" loading="lazy">
+                <img src="./assets/images/marcas/aurora.webp" alt="Aurora" loading="lazy">
+                <img src="./assets/images/marcas/sadia.webp" alt="Sadia" loading="lazy">
+                <img src="./assets/images/marcas/tirolez.webp" alt="Tirolez" loading="lazy">
             </div>
         </div>
     </div>
@@ -615,7 +669,7 @@
 
             <!-- VINHO BLOCO VISUAL (Novo) -->
             <div class="bebida-bloco bebida-cerveja reveal-left">
-                <div class="bebida-cerveja-img" style="background-image: url('./vinho.png');"></div>
+                <div class="bebida-cerveja-img" style="background-image: url('./assets/images/projetos/vinho.webp');"></div>
                 <div class="bebida-cerveja-overlay"
                     style="background: linear-gradient(160deg, rgba(56, 11, 21, 0.85) 0%, rgba(20, 10, 14, 0.7) 100%);">
                 </div>
@@ -634,7 +688,7 @@
             </div>
 
             <div class="bebida-bloco bebida-cerveja reveal-right">
-                <div class="bebida-cerveja-img" style="background-image: url('./cerveja.png')"></div>
+                <div class="bebida-cerveja-img" style="background-image: url('./assets/images/projetos/cerveja.webp')"></div>
                 <div class="bebida-cerveja-overlay"></div>
                 <div class="bebida-cerveja-content">
                     <span class="label-sm" style="color: var(--amber-pale);">Geladíssima</span>
@@ -765,7 +819,10 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <div class="footer-logo">
-                    <img src="./logo.png" alt="Dom Fratello" style="max-height: 80px;">
+                    <picture>
+                        <source srcset="./assets/images/thumbs/logo.webp" type="image/webp">
+                        <img src="./assets/images/thumbs/logo.png" alt="Dom Fratello" style="max-height: 80px;">
+                    </picture>
                 </div>
                 <p class="body-md" style="color: rgba(255,255,255,0.6); margin-top: 1rem; max-width: 280px;">
                     A tradição da noite, agora também no almoço. Uma casa com alma, história e presença real em Vargem
