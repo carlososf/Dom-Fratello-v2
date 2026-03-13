@@ -3,16 +3,14 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   root: './',
   base: './',
+  publicDir: 'public', // Tudo dentro de public/ será movido para o root da dist/
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
+    assetsDir: 'build-assets', // Pasta para JS/CSS processados, evita conflito com images
     rollupOptions: {
       input: {
         main: './index.html'
       }
     }
-  },
-  // Faz o Vite ignorar o processamento de imagens e apenas movê-las se necessário
-  // mas o ideal é deixar ele processar para versionamento
-  publicDir: 'public' // Vou criar essa pasta e colocar as imagens lá para garantir 100% de sucesso
+  }
 });
